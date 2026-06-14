@@ -1,0 +1,68 @@
+<div id="chat-bubble">
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      <div class="chat-avatar">SG</div>
+      <div class="chat-header-text">
+        <div class="chat-name">Sujon's AI Assistant</div>
+        <div class="chat-status">● Online — ask me anything</div>
+      </div>
+      <button class="chat-close" id="chatClose">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg bot">Hey! 👋 I'm Sujon's portfolio assistant. Ask me about his skills, certifications, projects, or availability for internships!</div>
+    </div>
+    <div class="preset-menu" id="presetMenu" style="display:none">
+      <button class="preset-btn" onclick="selectPreset('Who are you?')">👤 Who are you?</button>
+      <button class="preset-btn" onclick="selectPreset('What are your skills?')">💻 What are your skills?</button>
+      <button class="preset-btn" onclick="selectPreset('Tell me about your certifications')">🏆 Certifications</button>
+      <button class="preset-btn" onclick="selectPreset('What projects have you built?')">🔨 Your projects</button>
+      <button class="preset-btn" onclick="selectPreset('Are you available for internships?')">💼 Internship opportunities</button>
+      <button class="preset-btn" onclick="selectPreset('How can I contact you?')">📞 Contact info</button>
+      <button class="preset-btn" onclick="selectPreset('What languages do you speak?')">🌐 Languages</button>
+      <button class="preset-btn" onclick="selectPreset('Tell me about your soft skills')">🤝 Soft skills</button>
+    </div>
+    <div class="chat-input-row">
+      <button class="toggle-menu-btn" id="toggleMenuBtn" onclick="toggleMenu()">📋 Quick Q&A</button>
+      <input class="chat-input" id="chatInput" type="text" placeholder="Ask about Sujon..."/>
+      <button class="chat-send" id="chatSend">
+        <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+  <button class="chat-fab" id="chatFab">
+    <div class="chat-ball">
+      <div class="ball-eye" id="eye1" style="left:12px;top:16px">
+        <div class="ball-pupil" id="pupil1"></div>
+      </div>
+      <div class="ball-eye" id="eye2" style="right:12px;top:16px">
+        <div class="ball-pupil" id="pupil2"></div>
+      </div>
+    </div>
+  </button>
+</div>
+
+<!-- Scroll to top button -->
+<button id="scroll-to-top" title="Back to top">↑</button>
+
+<!-- Progress bar -->
+<div id="progress-bar"></div>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('presetMenu');
+    const btn = document.getElementById('toggleMenuBtn');
+    if (menu.style.display === 'none') {
+      menu.style.display = 'grid';
+      btn.textContent = '✕ Close';
+    } else {
+      menu.style.display = 'none';
+      btn.textContent = '📋 Quick Q&A';
+    }
+  }
+
+  function selectPreset(question) {
+    document.getElementById('chatInput').value = question;
+    const event = new KeyboardEvent('keydown', { key: 'Enter' });
+    document.getElementById('chatInput').dispatchEvent(event);
+  }
+</script>
