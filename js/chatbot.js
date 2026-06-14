@@ -65,7 +65,7 @@ export function initChatbot() {
   };
 
   // Eye tracking
-  document.addEventListener('mousemove', (e) => {
+  window.addEventListener('mousemove', (e) => {
     const eye1 = document.getElementById('eye1');
     const eye2 = document.getElementById('eye2');
 
@@ -93,14 +93,15 @@ export function initChatbot() {
     const eye1 = document.getElementById('eye1');
     const eye2 = document.getElementById('eye2');
 
-    if (eye1 && eye2) {
-      eye1.style.scaleY = 0.1;
-      eye2.style.scaleY = 0.1;
-      setTimeout(() => {
-        eye1.style.scaleY = 1;
-        eye2.style.scaleY = 1;
-      }, 100);
-    }
+    if (!eye1 || !eye2) return;
+
+    eye1.style.opacity = '0.2';
+    eye2.style.opacity = '0.2';
+
+    setTimeout(() => {
+      eye1.style.opacity = '1';
+      eye2.style.opacity = '1';
+    }, 120);
   }, 4000);
 
   // Toggle chat window
@@ -113,27 +114,35 @@ export function initChatbot() {
     }
   });
 
-  closeBtn.addEventListener('click', () => {
-    open = false;
-    win.classList.remove('open');
-  });
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      open = false;
+      win.classList.remove('open');
+    });
+  }
 
-  // Toggle preset menu
-  toggleMenuBtn.addEventListener('click', () => {
-    if (presetMenu.style.display === 'none') {
-      presetMenu.style.display = 'grid';
-      toggleMenuBtn.textContent = '✕ Close';
-    } else {
-      presetMenu.style.display = 'none';
-      toggleMenuBtn.textContent = '📋 Quick Q&A';
-    }
-  });
+  // Toggle preset menu — use display style to match HTML's initial state (display:none)
+  if (toggleMenuBtn && presetMenu) {
+    toggleMenuBtn.addEventListener('click', () => {
+
+      const isHidden =
+        getComputedStyle(presetMenu).display === 'none';
+
+      if (isHidden) {
+        presetMenu.style.display = 'grid';
+        toggleMenuBtn.textContent = '✕ Close';
+      } else {
+        presetMenu.style.display = 'none';
+        toggleMenuBtn.textContent = '📋 Quick Q&A';
+      }
+    });
+  }
 
   // Answer question
   function answerQuestion(q) {
     const lower = q.toLowerCase();
     for (const [keywords, answer] of Object.entries(responses)) {
-      const pattern = new RegExp(keywords.split('|').join('|'), 'i');
+      const pattern = new RegExp(`(${keywords})`, 'i');
       if (pattern.test(lower)) return answer;
     }
     return `Great question! For details about Sujon that I might not have, you can contact him directly at ${kb.email} or check his LinkedIn. I'm still learning! 🧠`;
@@ -177,16 +186,19 @@ export function initChatbot() {
     setTimeout(() => fab.classList.remove('pulse'), 2000);
   }
 
-  // Select preset question
-  window.selectPreset = function (question) {
+  // Select preset question — exposed globally for inline HTML onclick handlers
+  function selectPresetInternal(question) {
+    if (!input) return;
     input.value = question;
     sendMsg();
-    presetMenu.style.display = 'none';
-    toggleMenuBtn.textContent = '📋 Quick Q&A';
-  };
+    if (presetMenu) presetMenu.style.display = 'none';
+    if (toggleMenuBtn) toggleMenuBtn.textContent = '📋 Quick Q&A';
+  }
+  window.selectPreset = selectPresetInternal;
+  window._selectPreset = selectPresetInternal;
 
   // Send on button click
-  send.addEventListener('click', sendMsg);
+  if (send) send.addEventListener('click', sendMsg);
 
   // Send on Enter
   input.addEventListener('keydown', (e) => {
