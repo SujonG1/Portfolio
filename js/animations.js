@@ -82,12 +82,15 @@ export function initScrollToTop() {
 
 // Animate counter numbers
 export function animateCounter(element, target, duration = 1500) {
-  const start = parseInt(element.textContent) || 0;
-  const increment = (target - start) / (duration / 16);
-  let current = start;
+  if (isNaN(target)) return; // ignore non-numbers
+
+  const start = 0;
+  const increment = target / (duration / 16);
+  let current = 0;
 
   const timer = setInterval(() => {
     current += increment;
+
     if (current >= target) {
       element.textContent = target;
       clearInterval(timer);
@@ -103,9 +106,16 @@ export function initNumberAnimations() {
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting && !entry.target.hasAttribute('data-animated')) {
-        const target = parseInt(entry.target.textContent);
+      const value = entry.target.textContent.trim();
+      const target = parseInt(value);
+
+      if (
+        entry.isIntersecting &&
+        !entry.target.hasAttribute('data-animated') &&
+        !isNaN(target)
+      ) {
         animateCounter(entry.target, target);
+
         entry.target.setAttribute('data-animated', 'true');
         observer.unobserve(entry.target);
       }
@@ -148,16 +158,15 @@ export function initTextReveal() {
   const textElements = document.querySelectorAll('.section-title');
 
   textElements.forEach((element) => {
-    const text = element.textContent;
-    element.innerHTML = text
-      .split('')
-      .map((char, index) => {
-        const span = document.createElement('span');
-        span.textContent = char;
-        span.style.display = 'inline-block';
-        span.style.opacity = '0';
-        span.style.animation = `slideInUp 0.6s ease-out ${index * 0.03}s forwards`;
-        return span.outerHTML;
+    const words = element.textContent.split(' ');
+
+    element.innerHTML = words
+      .map((word, index) => {
+        return `<span style="
+          display:inline-block;
+          opacity:0;
+          animation: slideInUp 0.6s ease-out ${index * 0.1}s forwards;
+        ">${word}&nbsp;</span>`;
       })
       .join('');
   });
