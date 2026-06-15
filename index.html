@@ -1,321 +1,677 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Sujon Ganguly — Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="css/main.css"/>
-<link rel="stylesheet" href="css/animations.css"/>
-<link rel="stylesheet" href="css/components.css"/>
-<link rel="stylesheet" href="css/responsive.css"/>
-</head>
-<body>
-
-<nav>
-  <div class="nav-logo">sujon.dev</div>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#ai-playground">AI Lab</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
-</nav>
-
-<section id="hero">
-  <canvas id="particle-canvas"></canvas>
-  <div class="hero-content">
-    <div class="hero-eyebrow">Web Developer · AI Explorer · Content Writer · Kolkata, India</div>
-    <h1 class="hero-title">Sujon Ganguly<br><span class="line2">Building & Learning.</span></h1>
-    <p class="hero-sub">A motivated fresher with a strong foundation in programming, web development, and digital tools — available for part-time roles and internships.</p>
-    <div class="hero-btns">
-      <a href="#projects" class="btn-primary">See My Projects</a>
-      <a href="#ai-playground" class="btn-ghost">Explore AI Lab →</a>
-    </div>
-  </div>
-  <div class="scroll-hint"><div class="scroll-line"></div>scroll</div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ABOUT + CERTS MERGED -->
-<section id="about">
-  <div class="reveal">
-    <div class="section-label">About Me</div>
-    <h2 class="section-title">Who I Am</h2>
-  </div>
-
-  <div class="about-top reveal">
-    <div class="about-text">
-      <p>Hey! I'm Sujon — a fresher and aspiring IT professional from Kolkata, West Bengal. I completed my Higher Secondary in the Science stream (NIOS, 2026) with a First Division, scoring 86 in Computer Science.</p>
-      <p>I hold a Government-certified Diploma in Digital Techniques Application assessed by Hewlett Packard Enterprise, covering everything from C programming and Java OOP to MySQL and web development.</p>
-      <p>Outside of code, I'm passionate about creative writing, content writing, and communication — and I'm actively exploring AI and ML to understand where the world is heading next.</p>
-      <div class="skill-chips">
-        <span class="chip">C</span><span class="chip">C++</span><span class="chip">Python</span>
-        <span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">HTML5</span>
-        <span class="chip">CSS3</span><span class="chip">MySQL</span><span class="chip">MS Office</span>
-        <span class="chip">Advanced Excel</span><span class="chip">AI & ML Basics</span><span class="chip">Cybersecurity</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sujon Ganguly — Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-logo">sujon.dev</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#ai-playground">AI Lab</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
       </div>
-    </div>
-    <div class="stats-grid">
-      <div class="stat-card"><div class="stat-num">86</div><div class="stat-label">CS Score (Class XII)</div></div>
-      <div class="stat-card"><div class="stat-num">4</div><div class="stat-label">Certifications Earned</div></div>
-      <div class="stat-card"><div class="stat-num">A+</div><div class="stat-label">English Course Grade</div></div>
-      <div class="stat-card"><div class="stat-num">A</div><div class="stat-label">Diploma in Digital Techniques Application</div></div>
-    </div>
-  </div>
+      <button
+        class="nav-cta"
+        onclick="
+          document
+            .getElementById('contact')
+            .scrollIntoView({ behavior: 'smooth' })
+        "
+      >
+        Hire Me
+      </button>
+    </nav>
 
-  <!-- CERTS inside About -->
-  <div class="reveal">
-    <div class="certs-heading">Certifications</div>
-    <div class="cert-grid">
-      <div class="cert-card">
-        <div class="cert-icon">🏛️</div>
-        <div class="cert-org">Youth Computer Training Centre · Govt. of West Bengal · HPE India</div>
-        <div class="cert-title">Diploma in Digital Techniques Application</div>
-        <div class="cert-meta">Apr 2024 – Mar 2025 · 12 Months<br>MS Office, C, Java OOP, HTML5, MySQL, Cybersecurity</div>
-        <span class="cert-grade">Grade: A</span>
+    <section id="hero">
+      <canvas id="particle-canvas"></canvas>
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          Web Developer · AI Explorer · Content Writer · Kolkata, India
+        </div>
+        <h1 class="hero-title">
+          Sujon Ganguly<br /><span class="line2">Building & Learning.</span>
+        </h1>
+        <p class="hero-sub">
+          A motivated fresher with a strong foundation in programming, web
+          development, and digital tools — available for part-time roles and
+          internships.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn-primary">See My Projects</a>
+          <a href="#ai-playground" class="btn-ghost">Explore AI Lab →</a>
+        </div>
       </div>
-      <div class="cert-card">
-        <div class="cert-icon">📊</div>
-        <div class="cert-org">HPE Education Services · Hewlett Packard Enterprise</div>
-        <div class="cert-title">Advanced Excel Assessment</div>
-        <div class="cert-meta">May 2025 · Online Assessment<br>Cert No: HPE/CoC/WB/2505-060565</div>
-        <span class="cert-grade">Grade: B+</span>
+      <div class="scroll-hint">
+        <div class="scroll-line"></div>
+        scroll
       </div>
-      <div class="cert-card">
-        <div class="cert-icon">🗣️</div>
-        <div class="cert-org">Smart Study Edutech LLP (SmartEnglish)</div>
-        <div class="cert-title">Smart English Beginners Course</div>
-        <div class="cert-meta">Aug 2024 · 3 Months · Spoken English & Soft Skills<br>Cert No: SE/24-25/MOU/0091</div>
-        <span class="cert-grade">Grade: A+</span>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon">💬</div>
-        <div class="cert-org">Smart Study Edutech LLP (SmartEnglish)</div>
-        <div class="cert-title">Smart English Advanced Course</div>
-        <div class="cert-meta">Apr 2026 · 3 Months · Advanced Communication<br>Cert No: SE/25-26/MOU/AS025</div>
-        <span class="cert-grade">Grade: A</span>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<div class="divider"></div>
+    <div class="divider"></div>
 
-<section id="projects">
-  <div class="reveal">
-    <div class="section-label">Projects</div>
-    <h2 class="section-title">Things I'm Building</h2>
-    <p class="section-sub">Personal projects in web development, Python, and JavaScript — learning by doing, one commit at a time.</p>
-  </div>
-  <div class="projects-grid reveal">
-    <div class="project-card">
-      <div class="project-icon" style="background:rgba(108,99,255,.15)">🌐</div>
-      <div class="project-tag">Web Dev <span class="wip-badge">WIP</span></div>
-      <div class="project-title">Personal Portfolio Site</div>
-      <div class="project-desc">This very portfolio — built from scratch with HTML, CSS, and JavaScript. Focuses on clean design, responsiveness, and showcasing my work as it grows.</div>
-      <div class="project-stack"><span class="stack-item">HTML5</span><span class="stack-item">CSS3</span><span class="stack-item">JavaScript</span></div>
-      <a href="#" class="project-link">⌥ GitHub</a>
-    </div>
-    <div class="project-card">
-      <div class="project-icon" style="background:rgba(0,245,255,.1)">🐍</div>
-      <div class="project-tag">Python <span class="wip-badge">WIP</span></div>
-      <div class="project-title">Python Problem Solver</div>
-      <div class="project-desc">A growing collection of Python scripts solving real-world problems — from data processing utilities to automation tools. Built to practice applied Python.</div>
-      <div class="project-stack"><span class="stack-item">Python</span><span class="stack-item">File I/O</span><span class="stack-item">Logic</span></div>
-      <a href="#" class="project-link">⌥ GitHub</a>
-    </div>
-    <div class="project-card">
-      <div class="project-icon" style="background:rgba(255,79,154,.1)">📋</div>
-      <div class="project-tag">Database <span class="wip-badge">WIP</span></div>
-      <div class="project-title">Student Record System</div>
-      <div class="project-desc">A simple CRUD application using MySQL and Java — manage student data, run queries, and generate basic reports. Applies OOP and RDBMS concepts from my diploma.</div>
-      <div class="project-stack"><span class="stack-item">Java</span><span class="stack-item">MySQL</span><span class="stack-item">OOP</span></div>
-      <a href="#" class="project-link">⌥ GitHub</a>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section id="ai-playground">
-  <div class="reveal">
-    <div class="section-label">AI Playground</div>
-    <h2 class="section-title">Experimenting with Intelligence</h2>
-    <p class="section-sub">Exploring AI and ML fundamentals through hands-on experiments and mini-tools. This section grows as I learn.</p>
-  </div>
-  <div class="ai-grid reveal">
-    <div class="ai-card">
-      <div class="ai-badge">🤖 Chatbot</div>
-      <div class="ai-card-title">Portfolio Assistant</div>
-      <div class="ai-card-desc">An AI chatbot that knows everything about my background, skills, and projects — and can answer visitor questions in real time.</div>
-      <div class="ai-card-demo">
-        <div class="demo-line">&gt; Is Sujon available for internships?</div>
-        <div class="demo-line output">Yes! He's actively looking for part-time roles and internships in IT and development.</div>
+    <!-- ABOUT + CERTS MERGED -->
+    <section id="about">
+      <div class="reveal">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">Who I Am</h2>
       </div>
-      <button class="ai-try-btn" onclick="document.getElementById('chatFab').click()">Chat with it →</button>
-    </div>
-    <div class="ai-card">
-      <div class="ai-badge">📝 NLP</div>
-      <div class="ai-card-title">Writing Assistant</div>
-      <div class="ai-card-desc">A personal experiment using AI APIs to assist with content writing — rephrase, summarize, or improve any paragraph instantly.</div>
-      <div class="ai-card-demo">
-        <div class="demo-line">&gt; Make this more engaging</div>
-        <div class="demo-line output">Rewritten with stronger hooks and cleaner flow...</div>
-      </div>
-      <button class="ai-try-btn">Coming Soon →</button>
-    </div>
-    <div class="ai-card">
-      <div class="ai-badge">🔮 ML</div>
-      <div class="ai-card-title">Prediction Explorer</div>
-      <div class="ai-card-desc">Learning how machine learning models make predictions — an interactive demo built while studying AI & ML fundamentals.</div>
-      <div class="ai-card-demo">
-        <div class="demo-line">&gt; Input: [age, marks, attendance]</div>
-        <div class="demo-line output">Prediction: Pass (confidence: 87%)</div>
-      </div>
-      <button class="ai-try-btn">Coming Soon →</button>
-    </div>
-    <div class="ai-card">
-      <div class="ai-badge">🛡️ Security</div>
-      <div class="ai-card-title">Cyber Awareness Quiz</div>
-      <div class="ai-card-desc">An interactive quiz on cybersecurity basics — phishing, password hygiene, network safety — built from my diploma coursework.</div>
-      <div class="ai-card-demo">
-        <div class="demo-line">&gt; Q: What is a phishing attack?</div>
-        <div class="demo-line output">Score: 8/10 — Strong awareness!</div>
-      </div>
-      <button class="ai-try-btn">Coming Soon →</button>
-    </div>
-  </div>
-</section>
 
-<div class="divider"></div>
-
-<section id="blog">
-  <div class="reveal">
-    <div class="section-label">Blog</div>
-    <h2 class="section-title">Writing That Comes From Curiosity</h2>
-    <p class="section-sub">Writing about technology, learning journeys, AI, and the craft of communication — in plain English anyone can enjoy.</p>
-  </div>
-  <div class="blog-grid reveal">
-    <div class="blog-card">
-      <div class="blog-img blog-img-1">🧠</div>
-      <div class="blog-body">
-        <div class="blog-meta"><span class="blog-cat">AI</span><span>Jun 2026 · 5 min read</span></div>
-        <div class="blog-title">What I Learned Exploring AI as a Fresher</div>
-        <div class="blog-excerpt">Starting with ML fundamentals feels like learning a new language — but once it clicks, you start seeing patterns everywhere...</div>
+      <div class="about-top reveal">
+        <div class="about-text">
+          <p>
+            Hey! I'm Sujon — a fresher and aspiring IT professional from
+            Kolkata, West Bengal. I completed my Higher Secondary in the Science
+            stream (NIOS, 2026) with a First Division, scoring 86 in Computer
+            Science.
+          </p>
+          <p>
+            I hold a Government-certified Diploma in Digital Techniques
+            Application assessed by Hewlett Packard Enterprise, covering
+            everything from C programming and Java OOP to MySQL and web
+            development.
+          </p>
+          <p>
+            Outside of code, I'm passionate about creative writing, content
+            writing, and communication — and I'm actively exploring AI and ML to
+            understand where the world is heading next.
+          </p>
+          <div class="skill-chips">
+            <span class="chip">C</span><span class="chip">C++</span
+            ><span class="chip">Python</span> <span class="chip">Java</span
+            ><span class="chip">JavaScript</span><span class="chip">HTML5</span>
+            <span class="chip">CSS3</span><span class="chip">MySQL</span
+            ><span class="chip">MS Office</span>
+            <span class="chip">Advanced Excel</span
+            ><span class="chip">AI & ML Basics</span
+            ><span class="chip">Cybersecurity</span>
+          </div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-num">86</div>
+            <div class="stat-label">CS Score (Class XII)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">4</div>
+            <div class="stat-label">Certifications Earned</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">A+</div>
+            <div class="stat-label">English Course Grade</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">A</div>
+            <div class="stat-label">
+              Diploma in Digital Techniques Application
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="blog-card">
-      <div class="blog-img blog-img-2">💻</div>
-      <div class="blog-body">
-        <div class="blog-meta"><span class="blog-cat">Programming</span><span>May 2026 · 4 min read</span></div>
-        <div class="blog-title">From C to Python — How My Thinking About Code Changed</div>
-        <div class="blog-excerpt">Learning C first was a blessing in disguise. When I picked up Python, I finally understood what was happening under the hood...</div>
+
+      <!-- CERTS inside About -->
+      <div class="reveal">
+        <div class="certs-heading">Certifications</div>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <div class="cert-icon">🏛️</div>
+            <div class="cert-org">
+              Youth Computer Training Centre · Govt. of West Bengal · HPE India
+            </div>
+            <div class="cert-title">
+              Diploma in Digital Techniques Application
+            </div>
+            <div class="cert-meta">
+              Apr 2024 – Mar 2025 · 12 Months<br />MS Office, C, Java OOP,
+              HTML5, MySQL, Cybersecurity
+            </div>
+            <span class="cert-grade">Grade: A</span>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">📊</div>
+            <div class="cert-org">
+              HPE Education Services · Hewlett Packard Enterprise
+            </div>
+            <div class="cert-title">Advanced Excel Assessment</div>
+            <div class="cert-meta">
+              May 2025 · Online Assessment<br />Cert No: HPE/CoC/WB/2505-060565
+            </div>
+            <span class="cert-grade">Grade: B+</span>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">🗣️</div>
+            <div class="cert-org">Smart Study Edutech LLP (SmartEnglish)</div>
+            <div class="cert-title">Smart English Beginners Course</div>
+            <div class="cert-meta">
+              Aug 2024 · 3 Months · Spoken English & Soft Skills<br />Cert No:
+              SE/24-25/MOU/0091
+            </div>
+            <span class="cert-grade">Grade: A+</span>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">💬</div>
+            <div class="cert-org">Smart Study Edutech LLP (SmartEnglish)</div>
+            <div class="cert-title">Smart English Advanced Course</div>
+            <div class="cert-meta">
+              Apr 2026 · 3 Months · Advanced Communication<br />Cert No:
+              SE/25-26/MOU/AS025
+            </div>
+            <span class="cert-grade">Grade: A</span>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="blog-card">
-      <div class="blog-img blog-img-3">✍️</div>
-      <div class="blog-body">
-        <div class="blog-meta"><span class="blog-cat">Creative Writing</span><span>Apr 2026 · 6 min read</span></div>
-        <div class="blog-title">Why Every Developer Should Learn to Write Well</div>
-        <div class="blog-excerpt">Code communicates with machines. Writing communicates with people. The best developers do both — and here's why I'm investing in both skills...</div>
+        <a
+          href="#"
+          style="
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2.5rem;
+            padding: 0.9rem 2.2rem;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #2563eb, #38bdf8, #1e40af);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: 0.35s ease;
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.25);
+          "
+          onmouseover="
+            this.style.transform = 'translateY(-5px) scale(1.03)';
+            this.style.boxShadow = '0 15px 40px rgba(37,99,235,0.45)';
+          "
+          onmouseout="
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = '0 10px 30px rgba(37,99,235,0.25)';
+          "
+        >
+          See All Certificates →
+        </a>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="projects">
+      <div class="reveal">
+        <div class="section-label">Projects</div>
+        <h2 class="section-title">Things I'm Building</h2>
+        <p class="section-sub">
+          Personal projects in web development, Python, and JavaScript —
+          learning by doing, one commit at a time.
+        </p>
       </div>
-    </div>
-    <a href="https://sujong1.github.io/Blogs/"
-    style="
-    display:inline-flex;
-    justify-content:center;
-    align-items:center;
-    margin-top:2.5rem;
-    padding:0.9rem 2.2rem;
-    border-radius:50px;
-    background:linear-gradient(135deg,#2563eb,#38bdf8,#1e40af);
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-    font-size:0.95rem;
-    letter-spacing:0.5px;
-    transition:0.35s ease;
-    box-shadow:0 10px 30px rgba(37,99,235,0.25);
-    "
-    onmouseover="this.style.transform='translateY(-5px) scale(1.03)';this.style.boxShadow='0 15px 40px rgba(37,99,235,0.45)'"
-    onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 10px 30px rgba(37,99,235,0.25)'"
-  >
-    Read All Blogs →
-  </a>
-  </div>
-</section>
+      <div class="projects-grid reveal">
+        <div class="project-card">
+          <div
+            class="project-icon"
+            style="background: rgba(108, 99, 255, 0.15)"
+          >
+            🌐
+          </div>
+          <div class="project-tag">
+            Web Dev <span class="wip-badge">WIP</span>
+          </div>
+          <div class="project-title">Personal Portfolio Site</div>
+          <div class="project-desc">
+            This very portfolio — built from scratch with HTML, CSS, and
+            JavaScript. Focuses on clean design, responsiveness, and showcasing
+            my work as it grows.
+          </div>
+          <div class="project-stack">
+            <span class="stack-item">HTML5</span
+            ><span class="stack-item">CSS3</span
+            ><span class="stack-item">JavaScript</span>
+          </div>
+          <a href="https://github.com/SujonG1/Portfolio" class="project-link"
+            >⌥ GitHub</a
+          >
+        </div>
+        <div class="project-card">
+          <div class="project-icon" style="background: rgba(0, 245, 255, 0.1)">
+            🌐
+          </div>
+          <div class="project-tag">
+            Web Dev <span class="wip-badge">WIP</span>
+          </div>
+          <div class="project-title">Personal Blog site</div>
+          <div class="project-desc">
+            A growing collection of Blogs — from AI/ML, personal coding
+            experiences to random thoughts. Built to express myself.
+          </div>
+          <div class="project-stack">
+            <span class="stack-item">HTML5</span
+            ><span class="stack-item">CSS</span
+            ><span class="stack-item">JavaScript</span>
+          </div>
+          <a href="https://github.com/SujonG1/Blogs" class="project-link"
+            >⌥ GitHub</a
+          >
+        </div>
+        <div class="project-card">
+          <div class="project-icon" style="background: rgba(255, 79, 154, 0.1)">
+            📋
+          </div>
+          <div class="project-tag">
+            Database <span class="wip-badge">WIP</span>
+          </div>
+          <div class="project-title">Student Record System</div>
+          <div class="project-desc">
+            A simple CRUD application using MySQL and Java — manage student
+            data, run queries, and generate basic reports. Applies OOP and RDBMS
+            concepts from my diploma.
+          </div>
+          <div class="project-stack">
+            <span class="stack-item">Java</span
+            ><span class="stack-item">MySQL</span
+            ><span class="stack-item">OOP</span>
+          </div>
+          <a href="#" class="project-link">⌥ GitHub</a>
+        </div>
+        <a
+          href="#"
+          style="
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2.5rem;
+            padding: 0.9rem 2.2rem;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #2563eb, #38bdf8, #1e40af);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: 0.35s ease;
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.25);
+          "
+          onmouseover="
+            this.style.transform = 'translateY(-5px) scale(1.03)';
+            this.style.boxShadow = '0 15px 40px rgba(37,99,235,0.45)';
+          "
+          onmouseout="
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = '0 10px 30px rgba(37,99,235,0.25)';
+          "
+        >
+          See All Projects →
+        </a>
+    </section>
 
-<div class="divider"></div>
+    <div class="divider"></div>
 
-<section id="contact">
-  <div class="contact-inner reveal">
-    <div class="section-label" style="text-align:center">Contact</div>
-    <h2 class="section-title" style="text-align:center">Open to Internships & Part-Time Roles</h2>
-    <p style="color:var(--muted);max-width:480px;margin:0 auto;line-height:1.7;font-size:.95rem;text-align:center">Whether you have a project, an internship opportunity, or just want to talk tech and writing — I'd love to hear from you. Based in Kolkata, available remotely.</p>
-    <a href="mailto:sujonganguly01@gmail.com" class="contact-email">sujonganguly01@gmail.com</a>
-    <div style="text-align:center"><a href="mailto:sujonganguly01@gmail.com" class="btn-primary">Send a Message →</a></div>
-    <div class="social-links">
-      <a href="https://linkedin.com/in/sujon-ganguly-0bb22631a" class="social-btn">LinkedIn</a>
-      <a href="tel:+916291867792" class="social-btn">+91 62918 67792</a>
-    </div>
-  </div>
-</section>
-
-<footer><p>Built with curiosity & chai · Sujon Ganguly · Kolkata, India · 2026</p></footer>
-
-<div id="chat-bubble">
-  <div class="chat-window" id="chatWindow">
-    <div class="chat-header">
-      <div class="chat-avatar">SG</div>
-      <div class="chat-header-text">
-        <div class="chat-name">Sujon's AI Assistant</div>
-        <div class="chat-status">● Online — ask me anything</div>
+    <section id="ai-playground">
+      <div class="reveal">
+        <div class="section-label">AI Playground</div>
+        <h2 class="section-title">Experimenting with Intelligence</h2>
+        <p class="section-sub">
+          Exploring AI and ML fundamentals through hands-on experiments and
+          mini-tools. This section grows as I learn.
+        </p>
       </div>
-      <button class="chat-close" id="chatClose">✕</button>
-    </div>
-    <div class="chat-messages" id="chatMessages">
-      <div class="msg bot">Hey! 👋 I'm Sujon's portfolio assistant. Ask me about his skills, certifications, projects, or availability for internships!</div>
-    </div>
-    <div class="preset-menu" id="presetMenu" style="display:none">
-      <button class="preset-btn" onclick="selectPreset('Who are you?')">👤 Who are you?</button>
-      <button class="preset-btn" onclick="selectPreset('What are your skills?')">💻 What are your skills?</button>
-      <button class="preset-btn" onclick="selectPreset('Tell me about your certifications')">🏆 Certifications</button>
-      <button class="preset-btn" onclick="selectPreset('What projects have you built?')">🔨 Your projects</button>
-      <button class="preset-btn" onclick="selectPreset('Are you available for internships?')">💼 Internship opportunities</button>
-      <button class="preset-btn" onclick="selectPreset('How can I contact you?')">📞 Contact info</button>
-      <button class="preset-btn" onclick="selectPreset('What languages do you speak?')">🌐 Languages</button>
-      <button class="preset-btn" onclick="selectPreset('Tell me about your soft skills')">🤝 Soft skills</button>
-    </div>
-    <div class="chat-input-row">
-      <button class="toggle-menu-btn" id="toggleMenuBtn">📋 Quick Q&A</button>
-      <input class="chat-input" id="chatInput" type="text" placeholder="Ask about Sujon..."/>
-      <button class="chat-send" id="chatSend">
-        <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      <div class="ai-grid reveal">
+        <div class="ai-card">
+          <div class="ai-badge">🤖 Chatbot</div>
+          <div class="ai-card-title">Portfolio Assistant</div>
+          <div class="ai-card-desc">
+            An AI chatbot that knows everything about my background, skills, and
+            projects — and can answer visitor questions in real time.
+          </div>
+          <div class="ai-card-demo">
+            <div class="demo-line">
+              &gt; Is Sujon available for internships?
+            </div>
+            <div class="demo-line output">
+              Yes! He's actively looking for part-time roles and internships in
+              IT and development.
+            </div>
+          </div>
+          <button
+            class="ai-try-btn"
+            onclick="document.getElementById('chatFab').click()"
+          >
+            Chat with it →
+          </button>
+        </div>
+        <div class="ai-card">
+          <div class="ai-badge">📝 NLP</div>
+          <div class="ai-card-title">Writing Assistant</div>
+          <div class="ai-card-desc">
+            A personal experiment using AI APIs to assist with content writing —
+            rephrase, summarize, or improve any paragraph instantly.
+          </div>
+          <div class="ai-card-demo">
+            <div class="demo-line">&gt; Make this more engaging</div>
+            <div class="demo-line output">
+              Rewritten with stronger hooks and cleaner flow...
+            </div>
+          </div>
+          <button class="ai-try-btn">Coming Soon →</button>
+        </div>
+        <div class="ai-card">
+          <div class="ai-badge">🔮 ML</div>
+          <div class="ai-card-title">Prediction Explorer</div>
+          <div class="ai-card-desc">
+            Learning how machine learning models make predictions — an
+            interactive demo built while studying AI & ML fundamentals.
+          </div>
+          <div class="ai-card-demo">
+            <div class="demo-line">&gt; Input: [age, marks, attendance]</div>
+            <div class="demo-line output">
+              Prediction: Pass (confidence: 87%)
+            </div>
+          </div>
+          <button class="ai-try-btn">Coming Soon →</button>
+        </div>
+        <div class="ai-card">
+          <div class="ai-badge">🛡️ Security</div>
+          <div class="ai-card-title">Cyber Awareness Quiz</div>
+          <div class="ai-card-desc">
+            An interactive quiz on cybersecurity basics — phishing, password
+            hygiene, network safety — built from my diploma coursework.
+          </div>
+          <div class="ai-card-demo">
+            <div class="demo-line">&gt; Q: What is a phishing attack?</div>
+            <div class="demo-line output">Score: 8/10 — Strong awareness!</div>
+          </div>
+          <button class="ai-try-btn">Coming Soon →</button>
+        </div>
+      </div>
+      <a
+          href="#"
+          style="
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2.5rem;
+            padding: 0.9rem 2.2rem;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #2563eb, #38bdf8, #1e40af);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: 0.35s ease;
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.25);
+          "
+          onmouseover="
+            this.style.transform = 'translateY(-5px) scale(1.03)';
+            this.style.boxShadow = '0 15px 40px rgba(37,99,235,0.45)';
+          "
+          onmouseout="
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = '0 10px 30px rgba(37,99,235,0.25)';
+          "
+        >
+          Explore AI Playground →
+      </a>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="blog">
+      <div class="reveal">
+        <div class="section-label">Blog</div>
+        <h2 class="section-title">Writing That Comes From Curiosity</h2>
+        <p class="section-sub">
+          Writing about technology, learning journeys, AI, and the craft of
+          communication — in plain English anyone can enjoy.
+        </p>
+      </div>
+      <div class="blog-grid reveal">
+        <div class="blog-card">
+          <div class="blog-img blog-img-1">🧠</div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-cat">AI</span><span>Jun 2026 · 5 min read</span>
+            </div>
+            <div class="blog-title">
+              What I Learned Exploring AI as a Fresher
+            </div>
+            <div class="blog-excerpt">
+              Starting with ML fundamentals feels like learning a new language —
+              but once it clicks, you start seeing patterns everywhere...
+            </div>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-img blog-img-2">💻</div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-cat">Programming</span
+              ><span>May 2026 · 4 min read</span>
+            </div>
+            <div class="blog-title">
+              From C to Python — How My Thinking About Code Changed
+            </div>
+            <div class="blog-excerpt">
+              Learning C first was a blessing in disguise. When I picked up
+              Python, I finally understood what was happening under the hood...
+            </div>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-img blog-img-3">✍️</div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-cat">Creative Writing</span
+              ><span>Apr 2026 · 6 min read</span>
+            </div>
+            <div class="blog-title">
+              Why Every Developer Should Learn to Write Well
+            </div>
+            <div class="blog-excerpt">
+              Code communicates with machines. Writing communicates with people.
+              The best developers do both — and here's why I'm investing in both
+              skills...
+            </div>
+          </div>
+        </div>
+        <a
+          href="https://sujong1.github.io/Blogs/"
+          style="
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2.5rem;
+            padding: 0.9rem 2.2rem;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #2563eb, #38bdf8, #1e40af);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: 0.35s ease;
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.25);
+          "
+          onmouseover="
+            this.style.transform = 'translateY(-5px) scale(1.03)';
+            this.style.boxShadow = '0 15px 40px rgba(37,99,235,0.45)';
+          "
+          onmouseout="
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = '0 10px 30px rgba(37,99,235,0.25)';
+          "
+        >
+          Read All Blogs →
+        </a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="contact">
+      <div class="contact-inner reveal">
+        <div class="section-label" style="text-align: center">Contact</div>
+        <h2 class="section-title" style="text-align: center">
+          Open to Internships & Part-Time Roles
+        </h2>
+        <p
+          style="
+            color: var(--muted);
+            max-width: 480px;
+            margin: 0 auto;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            text-align: center;
+          "
+        >
+          Whether you have a project, an internship opportunity, or just want to
+          talk tech and writing — I'd love to hear from you. Based in Kolkata,
+          available remotely.
+        </p>
+        <a href="mailto:sujonganguly01@gmail.com" class="contact-email"
+          >sujonganguly01@gmail.com</a
+        >
+        <div style="text-align: center">
+          <a href="mailto:sujonganguly01@gmail.com" class="btn-primary"
+            >Send a Message →</a
+          >
+        </div>
+        <div class="social-links">
+          <a
+            href="https://linkedin.com/in/sujon-ganguly-0bb22631a"
+            class="social-btn"
+            >LinkedIn</a
+          >
+          <a href="tel:+916291867792" class="social-btn">+91 62918 67792</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Built with curiosity & chai · Sujon Ganguly · Kolkata, India · 2026</p>
+    </footer>
+
+    <div id="chat-bubble">
+      <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+          <div class="chat-avatar">SG</div>
+          <div class="chat-header-text">
+            <div class="chat-name">Sujon's AI Assistant</div>
+            <div class="chat-status">● Online — ask me anything</div>
+          </div>
+          <button class="chat-close" id="chatClose">✕</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <div class="msg bot">
+            Hey! 👋 I'm Sujon's portfolio assistant. Ask me about his skills,
+            certifications, projects, or availability for internships!
+          </div>
+        </div>
+        <div class="preset-menu" id="presetMenu" style="display: none">
+          <button class="preset-btn" onclick="selectPreset('Who are you?')">
+            👤 Who are you?
+          </button>
+          <button
+            class="preset-btn"
+            onclick="selectPreset('What are your skills?')"
+          >
+            💻 What are your skills?
+          </button>
+          <button
+            class="preset-btn"
+            onclick="selectPreset('Tell me about your certifications')"
+          >
+            🏆 Certifications
+          </button>
+          <button
+            class="preset-btn"
+            onclick="selectPreset('What projects have you built?')"
+          >
+            🔨 Your projects
+          </button>
+          <button
+            class="preset-btn"
+            onclick="selectPreset('Are you available for internships?')"
+          >
+            💼 Internship opportunities
+          </button>
+          <button
+            class="preset-btn"
+            onclick="selectPreset('How can I contact you?')"
+          >
+            📞 Contact info
+          </button>
+          <button
+            class="preset-btn"
+            onclick="selectPreset('What languages do you speak?')"
+          >
+            🌐 Languages
+          </button>
+          <button
+            class="preset-btn"
+            onclick="selectPreset('Tell me about your soft skills')"
+          >
+            🤝 Soft skills
+          </button>
+        </div>
+        <div class="chat-input-row">
+          <button class="toggle-menu-btn" id="toggleMenuBtn">
+            📋 Quick Q&A
+          </button>
+          <input
+            class="chat-input"
+            id="chatInput"
+            type="text"
+            placeholder="Ask about Sujon..."
+          />
+          <button class="chat-send" id="chatSend">
+            <svg viewBox="0 0 24 24">
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <button class="chat-fab" id="chatFab">
+        <div class="chat-ball">
+          <div class="ball-eye" id="eye1" style="left: 12px; top: 16px">
+            <div class="ball-pupil" id="pupil1"></div>
+          </div>
+          <div class="ball-eye" id="eye2" style="right: 12px; top: 16px">
+            <div class="ball-pupil" id="pupil2"></div>
+          </div>
+        </div>
       </button>
     </div>
-  </div>
-  <button class="chat-fab" id="chatFab">
-    <div class="chat-ball">
-      <div class="ball-eye" id="eye1" style="left:12px;top:16px">
-        <div class="ball-pupil" id="pupil1"></div>
-      </div>
-      <div class="ball-eye" id="eye2" style="right:12px;top:16px">
-        <div class="ball-pupil" id="pupil2"></div>
-      </div>
-    </div>
-  </button>
-</div>
-<button id="scroll-to-top" title="Back to top">↑</button>
-<div id="progress-bar"></div>
+    <button id="scroll-to-top" title="Back to top">↑</button>
+    <div id="progress-bar"></div>
 
-<script type="module" src="js/main.js"></script>
-<script>
-function toggleMenu(){const menu=document.getElementById('presetMenu');const btn=document.getElementById('toggleMenuBtn');if(menu.style.display==='none'){menu.style.display='grid';btn.textContent='✕ Close'}else{menu.style.display='none';btn.textContent='📋 Quick Q&A'}}
-function selectPreset(question){document.getElementById('chatInput').value=question;const event=new KeyboardEvent('keydown',{key:'Enter'});document.getElementById('chatInput').dispatchEvent(event)}
-</script>
-</body>
+    <script type="module" src="js/main.js"></script>
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("presetMenu");
+        const btn = document.getElementById("toggleMenuBtn");
+        if (menu.style.display === "none") {
+          menu.style.display = "grid";
+          btn.textContent = "✕ Close";
+        } else {
+          menu.style.display = "none";
+          btn.textContent = "📋 Quick Q&A";
+        }
+      }
+      function selectPreset(question) {
+        document.getElementById("chatInput").value = question;
+        const event = new KeyboardEvent("keydown", { key: "Enter" });
+        document.getElementById("chatInput").dispatchEvent(event);
+      }
+    </script>
+  </body>
 </html>
